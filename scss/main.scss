@@ -20,7 +20,7 @@ h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
 
   &.lg-heading {
     font-size: 6rem;
@@ -29,7 +29,6 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 2), 0.5);
   }
 }
 
@@ -53,6 +52,7 @@ main {
   min-height: calc(100vh - 60px);
   .icons {
     margin-top: 1rem;
+    margin-left: 1vw;
 
     a {
       padding: 0.4rem;
@@ -75,8 +75,11 @@ main {
 .about-info {
   display: grid;
   grid-template-areas:
-    "bioimage bio bio"
-    "job1 job2 job3";
+    //"bioimage bio bio"
+    //"job1 job2 job3";
+    "bioimage"
+    "bio"
+    "job1";
   grid-template-areas: repeat(3, 1fr);
 
   .bio-image {
@@ -88,19 +91,11 @@ main {
 
   .bio {
     grid-area: bio;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
-  .job-1 {
+  .job {
     grid-area: job1;
-  }
-
-  .job-2 {
-    grid-area: job2;
-  }
-
-  .job-3 {
-    grid-area: job3;
   }
 
   .job {
